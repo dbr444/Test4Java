@@ -4,9 +4,9 @@ public class Person {
     private String firstName;
     private String lastName;
     private String city;
-    private Integer age;
+    private int age;
 
-    public Person(String firstName, String lastName, String city, Integer age) {
+    public Person(String firstName, String lastName, String city, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.city = city;
@@ -25,7 +25,7 @@ public class Person {
         return city;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
