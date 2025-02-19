@@ -76,9 +76,9 @@ public class PersonService {
         validateField(person.getLastName(), "last name");
         validateField(person.getCity(), "city");
 
-        Optional.ofNullable(person.getAge())
-                .filter(age -> age > 0)
-                .orElseThrow(() -> new InvalidPersonDataException("Invalid field: " + "age"));
+        if (person.getAge() <= 0) {
+            throw new InvalidPersonDataException("Invalid field: age");
+        }
     }
     private void validateField(String field, String fieldName) {
         Optional.ofNullable(field)
